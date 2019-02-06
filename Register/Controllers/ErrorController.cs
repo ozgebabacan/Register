@@ -14,6 +14,7 @@ namespace Register.Controllers
             return View();
         }
 
+        [Route("error")]
         public ActionResult Error()
         {
             return View();

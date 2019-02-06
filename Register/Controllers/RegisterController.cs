@@ -42,16 +42,7 @@ namespace Register.Controllers
             return View(student);
         }
 
-        [Route("create2")]
-        [HttpGet]
-        public ActionResult Create2()
-        {
-            var student = new Student();
-            LoadCityDropDownViewBag();
-            return View(student);
-        }
-
-
+       
         [Route("create/{collection?}")]
         [HttpPost]
        

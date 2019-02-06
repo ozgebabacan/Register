@@ -160,7 +160,6 @@
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Views\Register\List.cshtml" />
     <Content Include="Views\Register\Delete.cshtml" />
-    <Content Include="Views\Register\Create2.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

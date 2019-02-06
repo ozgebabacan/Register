@@ -20,10 +20,10 @@ namespace Register
         }
 
         protected void Application_Error(object sender, EventArgs e)
-        {
-            Exception exception = Server.GetLastError();
-            Server.ClearError();
-            Response.RedirectToRoute("/Error");
-        }
+            {
+                Exception exception = Server.GetLastError();
+                Server.ClearError();
+                Response.Redirect("~/error");
+            }
     }
 }
