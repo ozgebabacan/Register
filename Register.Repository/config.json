@@ -1,0 +1,27 @@
+﻿{
+  "ActiveConnectionName": "dev",
+
+  "DatabaseConnections": [
+    {
+      "Name": "test",
+      "DatabaseServerAddr": ".",
+      "DatabaseName": "EFDBContext",
+      "DatabaseUser": "sa",
+      "DatabasePassword": "UG4cgCs4pxoaZDbaVWMJ2Q=="
+    },
+    {
+      "Name": "dev",
+      "DatabaseServerAddr": ".",
+      "DatabaseName": "dev",
+      "DatabaseUser": "sa",
+      "DatabasePassword": "NPelFdfXiPzdaqAqRvaHvg=="
+    },
+    {
+      "Name": "canlı",
+      "DatabaseServerAddr": ".",
+      "DatabaseName": "prod",
+      "DatabaseUser": "sa",
+      "DatabasePassword": "1Kr3qZcwXvur1zUFu3m02A=="
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+﻿@model Register.Model.DatabaseModel.Student
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_layout.cshtml";
+
+    var listOfCities = ViewBag.Cities as SelectList;
+    var listOfDistricts = new List<SelectListItem>();
+}
+
+
+
+<main class="my-form">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">Register</div>
+                    <div class="card-body">
+                        @using (Html.BeginForm("Create","Register",FormMethod.Post))
+                        {
+                            @Html.AntiForgeryToken()
+                            <div class="form-group row">
+                                @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "col-md-4 col-form-label text-md-right" })
+                                <div class="col-md-6">
+                                    @Html.TextBoxFor(model => model.Name, htmlAttributes: new { @class = "form-control", id = "name", name = "name" })
+                                    @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                @Html.LabelFor(model => model.Surname, htmlAttributes: new { @class = "col-md-4 col-form-label text-md-right" })
+
+                                <div class="col-md-6">
+                                    @Html.TextBoxFor(model => model.Surname, htmlAttributes: new { @class = "form-control", id = "surname", name = "surname" })
+                                    @Html.ValidationMessageFor(model => model.Surname, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                @Html.LabelFor(model => model.MobilePhone, htmlAttributes: new { @class = "col-md-4 col-form-label text-md-right" })
+
+                                <div class="col-md-6">
+                                    @Html.TextBoxFor(model => model.MobilePhone, htmlAttributes: new { @class = "form-control", id = "mobilePhone", name = "mobilePhone" })
+                                    @Html.ValidationMessageFor(model => model.MobilePhone, "", new { @class = "text-danger" })
+
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                @Html.LabelFor(model => model.City, htmlAttributes: new { @class = "col-md-4 col-form-label text-md-right" })
+                                <div class="col-md-6">
+                                    @Html.DropDownListFor(model => model.City.Id, listOfCities, "Select..", new { id = "city", @onchange = "GetDistricts(this)", @class = "form-control" })
+                                    @Html.ValidationMessageFor(model => model.City.Id, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                @Html.LabelFor(model => model.District, htmlAttributes: new { @class = "col-md-4 col-form-label text-md-right" })
+                                <div class="col-md-6">
+                                    @Html.DropDownListFor(model => model.District.Id, listOfDistricts, "Select..", new { id = "district", @class = "form-control" })
+                                    @Html.ValidationMessageFor(model => model.District.Id, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "col-md-4 col-form-label text-md-right" })
+
+                                <div class="col-md-6">
+                                    @Html.TextBoxFor(model => model.Description, htmlAttributes: new { @class = "form-control", id = "description", name = "description" })
+                                    @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 offset-md-4">
+                                <button type="submit" class="btn btn-primary">
+                                    Register
+                                </button>
+                            </div>
+
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+
