@@ -62,22 +62,22 @@
 
             #region Students
 
-            var student1 = new Student() { Name = "xxx",Surname = "xxxx",MobilePhone = "3333333333",City = new City() ,District = new District(),Description = "xxxxxxxxxx"};
-            var student2 = new Student() { Name = "yyy", Surname = "yyyy", MobilePhone = "5555555555", City = new City(), District = new District(), Description = "yyyyyyyyy" };
-            var student3 = new Student() { Name = "zzz", Surname = "zzzz", MobilePhone = "4444444444", City = new City(), District = new District(), Description = "zzzzzzzzzzz" };
+            //var student1 = new Student() { Name = "xxx",Surname = "xxxx",MobilePhone = "3333333333",City = new City() ,District = new District(),Description = "xxxxxxxxxx"};
+            //var student2 = new Student() { Name = "yyy", Surname = "yyyy", MobilePhone = "5555555555", City = new City(), District = new District(), Description = "yyyyyyyyy" };
+            //var student3 = new Student() { Name = "zzz", Surname = "zzzz", MobilePhone = "4444444444", City = new City(), District = new District(), Description = "zzzzzzzzzzz" };
           
 
-            student1.City = district1.City;
-            student1.District = district1;
-            student2.City = district5.City;
-            student2.District = district5;
-            student3.City = district8.City;
-            student3.District = district8;
+            //student1.City = city1;
+            //student1.District = district1;
+            //student2.City = city3;
+            //student2.District = district5;
+            //student3.City = city2;
+            //student3.District = district3;
          
 
-            context.Student.AddOrUpdate(student1);
-            context.Student.AddOrUpdate(student2);
-            context.Student.AddOrUpdate(student3);
+            //context.Student.AddOrUpdate(student1);
+            //context.Student.AddOrUpdate(student2);
+            //context.Student.AddOrUpdate(student3);
            
 
 
